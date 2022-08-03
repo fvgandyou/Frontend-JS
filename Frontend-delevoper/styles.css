@@ -292,6 +292,86 @@ li > a:hover {
     cursor: pointer;
 }
 
+/* CSS product details selected */
+.product-picked {
+    position: absolute; 
+    width: 360px; 
+    padding-bottom: 12px; 
+    margin: 0; 
+    right: 0;
+    top: 61px;
+    background-color: var(--white);
+}
+.product-picked-close {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 8px;
+    left: 36px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.product-picked-close img {
+    width: 11px;
+    height: 11px;
+}
+.product-picked-close:hover {
+    cursor: pointer;
+}
+.product-picked > img:nth-child(2) {
+    width: 360px; 
+    height: 360px; 
+    object-fit: cover; 
+    border-radius: 0 0 20px 20px;
+}
+.product {
+    width: 360px; 
+    margin: 0; 
+    padding: 0 12px; 
+    display: flex; 
+    flex-direction: column; 
+    box-sizing: border-box;
+}
+.product p:nth-child(1) {
+    font-weight: bold; 
+    font-size: var(--md);
+}
+.product p:nth-child(2) {
+    color: var(--very-light-pink); 
+    font-size: var(--md);
+}
+.product p:nth-child(3) {
+    color: var(--black); 
+    font-size: var(--sm);
+    padding: 12px 0 8px 0;
+}
+.product > p {
+    margin: 3px 0;
+}
+.product > button {
+    margin: 4px 0;
+}
+.primary-button {
+    width: 100%; 
+    height: 50px;
+    font-size: var(--md); 
+    font-weight: bold; 
+    color: var(--white); 
+    background-color: var(--hospital-green); 
+    border: 1px solid var(--hospital-green); 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+.add-to-cart-button {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
 @media (max-width: 640px) {
     .navbar {
         grid-template-columns: 1fr 2fr 1fr;
@@ -317,6 +397,11 @@ li > a:hover {
         width: 140px; 
         height: 140px; 
         border-radius: 16px;
+    }
+    .product-picked, .product-picked > img:nth-child(2), .product {
+        width: 100%;
+    } .product-picked > img:nth-child(2) {
+        height: auto;
     }
 }
 @media (min-width: 639px) {
